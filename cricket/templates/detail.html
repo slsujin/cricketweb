@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container">
+    <div class="row ">
+    <div class="col-md-6 px-4 p-3" >
+        <img src="{{cricketer.img.url}}" class="rounded float-start" width="300" height="350">
+    </div>
+    <div class="col-md-6 px-4 p-3 align-items-center ">
+        <h2>{{cricketer.name}}</h2>
+        <h4>{{cricketer.about}}</h4>
+        <h6>{{cricketer.age}}</h6>
+        <a class="btn btn-warning" href="{% url 'cricketer2:update' cricketer.id %}">UPDATE</a>
+        <a class="btn btn-danger"  href="{% url 'cricketer2:delete' cricketer.id %}">DELETE</a>
+
+     </div>
+   </div>
+</div>
+
+
+{% endblock %}

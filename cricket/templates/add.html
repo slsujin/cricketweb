@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="row justify-content-md-center">
+<div class="col-md-auto py-5">
+
+
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  <input type="text" name="name" placeholder="Enter player name"><br>
+  <input type="text" name="about" placeholder="About the player"><br>
+  <input type="text" name="age" placeholder="Enter player age"><br>
+  <input type="file" name="img" ><br>
+  <input type="submit">
+
+</form>
+  </div>
+  </div>
+{% endblock %}
